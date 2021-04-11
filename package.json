@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio front-end project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass ./app/sass/main.scss ./app/style.css -w",
+    "start:server": "live-server --port=8000 --mount=/:app/ --watch=./app --open=/app/index.html",
+    "start": "npm run compile:sass & npm run start:server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/green2cerberuz/portfolio.git"
+  },
+  "author": "Cristhian Bravo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/green2cerberuz/portfolio/issues"
+  },
+  "homepage": "https://github.com/green2cerberuz/portfolio#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {}
+}
