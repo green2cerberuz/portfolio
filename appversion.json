@@ -2,10 +2,10 @@
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 0
+    "patch": 1
   },
   "status": {
-    "stage": null,
+    "stage": "stable",
     "number": 0
   },
   "build": {
@@ -16,7 +16,7 @@
   "commit": null,
   "config": {
     "appversion": "1.7.1",
-    "markdown": [],
+    "markdown": ["README.md"],
     "json": [],
     "ignore": []
   }

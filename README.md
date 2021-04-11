@@ -1,5 +1,9 @@
 # Portfolio
 
+[![AppVersion-version](https://img.shields.io/badge/AppVersion-1.0.1-brightgreen.svg?style=flat)](https://github.com/delvedor/appversion?#version)
+
+[![AppVersion-status](https://img.shields.io/badge/Status-stable-brightgreen.svg?style=flat)](https://github.com/delvedor/appversion?#status)
+
 Personal portfolio project.
 Environment is setup to run node js inside a docker image. Have preconfigure a sass compiler and a live server to improve front end development with hot reloading.
 
@@ -43,3 +47,23 @@ This project uses semantic versioning with appversion package. To initialize it 
 ```init
 docker run --rm -it --name test-front -p 8000:8000 -v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules test-node yarn apv init
 ```
+
+To update a version run:
+
+```shell
+docker run --rm -it --name test-front -p 8000:8000 -v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules test-node yarn apv update <patch/minor/major>
+```
+
+To generate a badge:
+
+```shell
+docker run --rm -it --name test-front -p 8000:8000 -v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules test-node yarn apv generate-badge <version/status>
+```
+
+To set project status:
+
+```shell
+docker run --rm -it --name test-front -p 8000:8000 -v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules test-node yarn apv set-status <stable/rc/beta/alpha>
+```
+
+
