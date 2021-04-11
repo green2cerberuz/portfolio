@@ -23,5 +23,7 @@
     "live-server": "^1.2.1",
     "node-sass": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "appversion": "^1.7.1"
+  }
 }

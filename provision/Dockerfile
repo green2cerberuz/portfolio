@@ -6,24 +6,22 @@ ARG USER_ID
 ARG GROUP_ID
 ARG USERNAME
 
-USER root
-
 ENV APP_HOME /usr/src
 WORKDIR $APP_HOME
 
-COPY package.json scripts/user.sh $APP_HOME/
-
-RUN ./user.sh
+# COPY all data for project directory
+COPY . $APP_HOME
 
 # RUN npm install yarn
 RUN yarn install
 
-COPY . $APP_HOME
 
-RUN chown -R $USER_ID:$GROUP_ID $APP_HOME
-# USER NODE
-
+RUN ./scripts/user.sh && chown -R $USER_ID:$GROUP_ID $APP_HOME
 USER $USERNAME
+
+
+
+
 
 
 
