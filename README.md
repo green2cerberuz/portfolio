@@ -65,5 +65,3 @@ To set project status:
 ```shell
 docker run --rm -it --name test-front -p 8000:8000 -v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules test-node yarn apv set-status <stable/rc/beta/alpha>
 ```
-
-
