@@ -180,3 +180,17 @@ body {
 .btn--white {
   padding: 10px 25px;
   border: 2px solid #fff; }
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  70% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.btn-animated {
+  animation: moveInButton .7s ease-out 0.8s;
+  animation-fill-mode: backwards; }
