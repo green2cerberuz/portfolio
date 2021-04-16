@@ -16,7 +16,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
         run: |
           ls -la
-          mkdir -p ./dist
-          cp -R ./app ./dist
-          rm -R ./dist/sass
+          mkdir -p dist
+          cp -r ./app/. ./dist
+          rm -r ./dist/sass
           npx netlify-cli deploy --dir=./dist --prod
