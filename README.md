@@ -1,6 +1,6 @@
 # Portfolio
 
-[![AppVersion-version](https://img.shields.io/badge/AppVersion-1.2.0-brightgreen.svg?style=flat)](https://github.com/delvedor/appversion?#version)
+[![AppVersion-version](https://img.shields.io/badge/AppVersion-1.3.0-brightgreen.svg?style=flat)](https://github.com/delvedor/appversion?#version)
 
 [![AppVersion-status](https://img.shields.io/badge/Status-stable-brightgreen.svg?style=flat)](https://github.com/delvedor/appversion?#status)
 
