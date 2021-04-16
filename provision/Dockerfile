@@ -9,14 +9,15 @@ ARG USERNAME
 ENV APP_HOME /usr/src
 WORKDIR $APP_HOME
 
-# COPY all data for project directory
-COPY . $APP_HOME
+# COPY all data from project directory
+COPY ./package.json ./yarn.lock  $APP_HOME/
 
 # RUN npm install yarn
 RUN yarn install
 
-
+COPY . $APP_HOME
 RUN ./scripts/user.sh && chown -R $USER_ID:$GROUP_ID $APP_HOME
+
 USER $USERNAME
 
 
