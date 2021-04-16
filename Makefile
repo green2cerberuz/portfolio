@@ -18,9 +18,9 @@ docker.start:
 apv.updateversion:
 	docker run --rm -it --name $(CONTAINER_NAME) -p 8000:8000 \
 	-v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules $(IMAGE_NAME) \
-	yarn apv update $(TYPE)
+	yarn apv update $(version)
 
 apv.setstatus:
 	docker run --rm -it --name $(CONTAINER_NAME) -p 8000:8000 \
 	-v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules $(CONTAINER_NAME) \
-	yarn apv update $(TYPE)
+	yarn apv update $(status)
