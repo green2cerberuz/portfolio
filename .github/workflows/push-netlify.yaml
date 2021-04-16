@@ -2,8 +2,8 @@ name: deploy on masterp push
 on:
   push:
     branches: [master]
-    # paths-ignore:
-    # - ".github/**"
+    paths-ignore:
+    - ".github/**"
 jobs:
   build: 
     runs-on: ubuntu-latest
