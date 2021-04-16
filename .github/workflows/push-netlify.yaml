@@ -1,4 +1,4 @@
-name: deploy on masterp ush
+name: deploy on masterp push
 on:
   push:
     branches: [master]
