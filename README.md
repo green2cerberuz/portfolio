@@ -1,29 +1,45 @@
 # Portfolio
 
-[![AppVersion-version](https://img.shields.io/badge/AppVersion-1.1.0-brightgreen.svg?style=flat)](https://github.com/delvedor/appversion?#version)
+[![AppVersion-version](https://img.shields.io/badge/AppVersion-1.2.0-brightgreen.svg?style=flat)](https://github.com/delvedor/appversion?#version)
 
 [![AppVersion-status](https://img.shields.io/badge/Status-stable-brightgreen.svg?style=flat)](https://github.com/delvedor/appversion?#status)
 
 Personal portfolio project.
-Environment is setup to run node js inside a docker image. Have preconfigure a sass compiler and a live server to improve front end development with hot reloading.
+Development environment is inside a docker container running nodejs. The container have sass compiler and a live server with hot reloading to improve development.
 
 Base image already have installed yarn so we only need to use it.
 
 ## Some commands for docker development
 
-Build development environment:
+If you have make installed you could run `make` to build the image
+and run a container with default parameters.
+
+The available commands are:
+
+`make docker.build` : To compile the image
+
+`make docker.start`: To run the live server inside the docker container.
+
+`make apv.updateversion version=<patch/minor/major>`: To update the version of the package. Using
+semantic versioning. Options are *patch, minor, major*
+
+`make apv.setstatus status=<stable/rc/beta/alpha>`: To update the status badge.
+
+If you prefer to run the commands directly on your shell you could use the following commands:
+
+Build the image:
 
 ```shell
 docker build -t <image-name> --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --build-arg USERNAME=<username> -f ./provision/Dockerfile .
 ```
 
-To run a container:
+Run a container:
 
 ``` shell
 docker run --rm --name <container_name> -p 8000:8000 -v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules <image-name> yarn run start
 ```
 
-To remove a container:
+Remove a container:
 
 `docker rm <container-name>`
 
@@ -65,5 +81,3 @@ To set project status:
 ```shell
 docker run --rm -it --name test-front -p 8000:8000 -v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules test-node yarn apv set-status <stable/rc/beta/alpha>
 ```
-
-
