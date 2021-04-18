@@ -1,0 +1,47 @@
+body { 
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    // need to add line height to have al my content uniform
+    color: $color-black;
+    // padding: 3rem; /*Maybe not, comment it later*/
+}
+
+
+
+.heading-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+    backface-visibility: hidden;
+
+    color:$color-white;
+    font-weight: 400;
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+
+    &--main {
+        display: block; 
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        /*
+            animation-delay: 3s
+            animation-iteration-count: 3;
+        */
+    }
+
+    &--name {
+        font-weight: 700;
+        color: $color-primary-font;
+    }
+
+    &--sub {
+        display: block;
+        animation: moveInRight 1s ease-out;
+    }
+
+}

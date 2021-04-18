@@ -1,0 +1,35 @@
+.btn {
+    &:link,
+    &:visited {
+        color: $color-white;
+        text-decoration: none;
+        font-size: 2.5rem;
+        display: inline-block;
+        // border-radius: 100px;
+        /* transition property must be defined in the initial state to work*/
+        transition: all .2s;
+    }
+
+    &:hover {
+        border: none;
+        background-color: $color-primary-font;
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
+    }
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+    }
+
+    &--white {
+        padding: 1rem 2.5rem;
+        border: .2rem solid $color-white;
+        // background-color: #fff;
+    }
+
+    &--animated {
+        animation: moveInButton .7s ease-out 0.8s;
+        animation-fill-mode: backwards;
+    }
+}
