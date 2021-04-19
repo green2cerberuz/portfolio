@@ -14,8 +14,8 @@
 </head>
 <body>
     <header class="header">
-        <div class="animation-wrapper">
-            <div class="animation-box">
+        <div class="header__animation-container">
+            <div class="header__animation-list">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -30,14 +30,28 @@
         </div>
 
 
-        <div class="text-box">
+        <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary-main">Hi, I'm <span class="heading-primary-main-name">Cristhian Bravo.</span>
+                <span class="heading-primary--main">Hi, I'm <span class="heading-primary--name">Cristhian Bravo.</span>
                 </span>
-                <span class="heading-primary-sub">I'm a full-stack web developer</span>
+                <span class="heading-primary--sub">I'm a full-stack web developer</span>
             </h1>
-            <a href="#" class="btn btn--white btn-animated">View my work</a>
+            <div class="header__btn-container">
+                <a href="#" class="btn btn--white btn--animated">View my work</a>
+            </div>
+            <!-- <a href="#" class="btn btn--white btn--animated">View my work</a> -->
         </div>
     </header>
+    <nav class="navbar">
+        <ul class="navbar__container">
+            <li class="navbar__item  navbar__item--selected"><a href="#">Home</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Portfolio</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Labs</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Blog</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
+        </ul>
+        <div class="navbar__decoration-line"></div>
+    </nav>
 </body>
 </html>

@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* To take into account change of default browser font size 10/16 *100 = 62.5*/
+    font-size: 62.5%; // root font size
+}
+
+body { 
+    box-sizing: border-box;
+}

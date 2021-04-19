@@ -1,0 +1,115 @@
+.header {
+    position: relative; /* Maybe not, comment it later*/
+    // height: 95vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Maybe i wont add this*/
+
+    &__animation-container {
+        z-index: -10;
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        // background-image: linear-gradient(
+        //     to right bottom,
+        //     rgba(177, 177, 177, 0.8),
+        //     rgba(68, 68, 68, 0.8)),
+        //     url("../images/hero_image.jpg");
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-light-gray, 0.8),
+            rgba($color-dark-gray, 0.8)),
+            url("../images/hero_image.jpg");
+        background-size: cover;
+        background-position:top;
+    }
+
+    &__animation-list div {
+
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background-color: transparent;
+        border: 3px solid rgba($color-white, 0.8);
+
+        &:nth-child(1) {
+            top: 12%;
+            left: 42%;
+            animation: animateBox 10s linear infinite;
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+            left: 50%;
+            animation: animateBox 7s linear infinite;
+        }
+
+        &:nth-child(3) {
+            top: 17%;
+            left: 6%;
+            animation: animateBox 9s linear infinite;
+        }
+
+        &:nth-child(4) {
+            top: 20%;
+            left: 60%;
+            animation: animateBox 10s linear infinite;
+        }
+
+        &:nth-child(5) {
+            top: 67%;
+            left: 10%;
+            animation: animateBox 6s linear infinite;
+        }
+
+        &:nth-child(6) {
+            top: 80%;
+            left: 70%;
+            animation: animateBox 12s linear infinite;
+        }
+
+        &:nth-child(7) {
+            top: 60%;
+            left: 80%;
+            animation: animateBox 15s linear infinite;
+        }
+
+        &:nth-child(8) {
+            top: 32%;
+            left: 25%;
+            animation: animateBox 16s linear infinite;
+        }
+
+        &:nth-child(9) {
+            top: 90%;
+            left: 25%;
+            animation: animateBox 9s linear infinite;
+        }
+
+        &:nth-child(10) {
+            top: 20%;
+            left: 80%;
+            animation: animateBox 5s linear infinite;
+        }
+
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__btn-container {
+        // This wrapper is because the button moves header text when hovering
+        // with absolute positioning i can get rid of the problem
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}

@@ -1,0 +1,47 @@
+.navbar {
+    background-color: $color-black;
+    color: $color-white;
+    
+    &__container {
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        text-transform: uppercase;
+        
+    }
+
+    &__item {
+        display: inline-block;
+        padding-left: 5rem;
+
+        &:first-of-type {
+            margin-left: 30rem;
+        }
+
+        &--selected {
+            a {
+                color: $color-primary-font;
+                text-decoration: none;
+            }
+        }
+        
+    }
+
+    &__link {
+        color: $color-white;
+        text-decoration: none;
+
+        &:visited,
+        &:link {
+            color: $color-white;
+        }
+    }
+
+
+    &__decoration-line {
+        width: 100%;
+        height: 0.2rem;
+        background-color: $color-primary-font;
+    }
+}
