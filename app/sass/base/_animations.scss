@@ -49,11 +49,56 @@
 @keyframes moveInButton {
     0%{
         opacity: 0;
-        transform: translateX(10prem);
+        transform: translateX(10rem);
     }
 
     70% {
         transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+
+@keyframes moveInTitle {
+    0%{
+        opacity: 0;
+        transform: translateX(-30rem);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateX(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes moveInMe {
+    0%{
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes moveInSkills {
+    0%{
+        opacity: 0;
+        transform: translateX(50rem);
     }
 
     100% {
