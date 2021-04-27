@@ -49,11 +49,14 @@ To add a new package to our image:
 docker run --rm -p 8000:8000 -v `pwd`:/usr/src -v nodemodules:/usr/src/node_modules <image-name> yarn add <package-name>
 ```
 
+## Usage
+
+To use the project run: `make init` to configure the volume.
+
 ## Git Hooks
 
 This projects uses the preparee-commit-message hook to add the branch name to our commit
-message. The script can be found at `scripts/prepare-commit-message.sh`. If you want to activate it, yo need to add the following line to `.git/hooks/prepare-commit-message` file after the variable declarations.
-
+message. The script can be found at `scripts/prepare-commit-message.sh`. If you want to activate it, you need to add the following line to `.git/hooks/prepare-commit-message` file, if it does not exist create it. The content will be the same than `prepare-commit-message.sample`. Afterthe variable declarations, include the following line:
 `./scripts/prepare-commit-message.sh $COMMIT_MSG_FILE`
 
 ## Semantic versioning

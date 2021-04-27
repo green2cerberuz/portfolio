@@ -1,0 +1,137 @@
+.about {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+
+    &__header {
+
+        margin-bottom: 10rem;
+
+        &__title {
+            color: $color-dark-gray;
+            margin-top: 6rem;
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            animation: moveInTitle 0.5s ease-out;
+        }
+
+        &__separator {
+            margin: 0 auto;
+            margin-top: 2rem;
+            border: .2rem solid $color-dark-gray;
+            width: 70%;
+            animation: moveInTitle 0.7s ease-out 0.5s;
+            animation-fill-mode: backwards;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &__me {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: moveInMe 0.8s ease-out 1s;
+        animation-fill-mode: backwards;
+
+        &__image {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);    
+        }
+
+        &__image img {
+            
+            max-width: 100%;
+            object-fit: cover;
+            // display: inline-block;
+            // height: 200px;
+        }
+
+        &__title {
+            margin-top: 2rem;
+            color: $color-dark-gray;
+        }
+
+        &__introduction {
+            width: 70%;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: $color-medium-gray;
+            line-height: 2.5rem;
+
+            p {
+                margin-top: 1rem;
+            }
+        }
+
+
+    }
+
+    &__skills{
+        width: 50%;
+        padding-left: 5rem;
+        animation: moveInSkills 0.8s ease-out 1s;
+        animation-fill-mode: backwards;
+    }    
+}
+
+.project {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 15rem;
+    background-color: #eee;
+
+    &__header {
+
+        margin-bottom: 10rem;
+
+        &__title {
+            color: $color-dark-gray;
+            margin-top: 6rem;
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            animation: moveInTitle 0.5s ease-out;
+        }
+
+        &__separator {
+            margin: 0 auto;
+            margin-top: 2rem;
+            border: .2rem solid $color-dark-gray;
+            width: 70%;
+            animation: moveInTitle 0.7s ease-out 0.5s;
+            animation-fill-mode: backwards;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__item {
+        height: 30rem;
+        width: 30rem;
+    }
+
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
